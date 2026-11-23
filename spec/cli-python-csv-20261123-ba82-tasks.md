@@ -35,19 +35,19 @@ Source: workstreams/cli-python-csv-20261123-ba82/spec/30-decomposition.md#DT-02
 
 
 ### TASK-003: CLI, порог и текстовый отчёт
-P2 | 🔍 REVIEW   Est: 0.5d
+P2 | ✅ DONE   Est: 0.5d
 
 Реализовать сценарии BEH-10, BEH-11, BEH-12, BEH-13, BEH-14 (DT-03, группа solo).
 Source: workstreams/cli-python-csv-20261123-ba82/spec/30-decomposition.md#DT-03
 **Depends on:** [TASK-001], [TASK-002]
 
 **Checklist:**
-- [ ] реализовать BEH-10: Команда печатает отчёт и завершается кодом 0
-- [ ] реализовать BEH-11: Ошибка валидации — stderr, ненулевой код, пустой stdout
-- [ ] реализовать BEH-12: Отчёт содержит блок трудных вопросов в нужном порядке
-- [ ] реализовать BEH-13: `--threshold 40` меняет блок трудных вопросов
-- [ ] реализовать BEH-14: Порог вне диапазона — ошибка аргумента без отчёта
-- [ ] проверка группы: tests/test_cli.py::test_main_prints_table_and_exits_zero (kind: pytest), tests/test_cli.py::test_main_reports_validation_error_to_stderr (kind: pytest), tests/test_cli.py::test_main_renders_hard_questions_block (kind: pytest), tests/test_cli.py::test_main_threshold_option_narrows_hard_list (kind: pytest), tests/test_cli.py::test_main_rejects_threshold_out_of_range (kind: pytest) зелёные на BEH-10, BEH-11, BEH-12, BEH-13, BEH-14
+- [x] реализовать BEH-10: Команда печатает отчёт и завершается кодом 0
+- [x] реализовать BEH-11: Ошибка валидации — stderr, ненулевой код, пустой stdout
+- [x] реализовать BEH-12: Отчёт содержит блок трудных вопросов в нужном порядке
+- [x] реализовать BEH-13: `--threshold 40` меняет блок трудных вопросов
+- [x] реализовать BEH-14: Порог вне диапазона — ошибка аргумента без отчёта
+- [x] проверка группы: tests/test_cli.py::test_main_prints_table_and_exits_zero (kind: pytest), tests/test_cli.py::test_main_reports_validation_error_to_stderr (kind: pytest), tests/test_cli.py::test_main_renders_hard_questions_block (kind: pytest), tests/test_cli.py::test_main_threshold_option_narrows_hard_list (kind: pytest), tests/test_cli.py::test_main_rejects_threshold_out_of_range (kind: pytest) зелёные на BEH-10, BEH-11, BEH-12, BEH-13, BEH-14
 
 
 
