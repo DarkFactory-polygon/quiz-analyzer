@@ -27,7 +27,7 @@ class ValidationError(Exception):
 def read_rows(path: str | Path) -> list[Row]:
     """Полностью разбирает файл и возвращает строки в порядке файла."""
     rows: list[Row] = []
-    with open(path, newline="", encoding="utf-8") as f:
+    with open(path, newline="", encoding="utf-8-sig") as f:
         reader = csv.reader(f)
         header = next(reader, None)
         if header is None or [h.strip() for h in header] != list(FIELDS):

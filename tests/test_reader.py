@@ -54,3 +54,9 @@ def test_read_rows_skips_blank_lines_and_counts_them(tmp_path):
     with pytest.raises(ValidationError) as exc:
         read_rows(p)
     assert exc.value.line_no == 4
+
+
+def test_read_rows_accepts_utf8_bom(tmp_path):
+    p = tmp_path / "bom.csv"
+    p.write_bytes(b"\xef\xbb\xbf" + f"{HEADER}\nA,Q1,x,1\n".encode())
+    assert read_rows(p) == [Row("A", "Q1", "x", True)]
