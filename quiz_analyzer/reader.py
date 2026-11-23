@@ -36,12 +36,12 @@ def read_rows(path: str | Path) -> list[Row]:
             line_no = reader.line_num
             if not values:  # пустая строка
                 continue
-            if len(values) < len(FIELDS):
+            if len(values) != len(FIELDS):
                 raise ValidationError(
                     line_no,
                     f"ожидалось {len(FIELDS)} поля, получено {len(values)}",
                 )
-            student, question, answer, correct = values[:4]
+            student, question, answer, correct = values
             if correct not in ("1", "0"):
                 raise ValidationError(
                     line_no, f'поле correct должно быть 1 или 0, получено "{correct}"'

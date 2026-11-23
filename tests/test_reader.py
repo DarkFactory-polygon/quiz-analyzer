@@ -38,6 +38,19 @@ def test_read_rows_rejects_short_row(tmp_path):
     assert exc.value.line_no == 3
 
 
+def test_read_rows_rejects_extra_fields(tmp_path):
+    # запятая в ответе без кавычек: "3,1" сдвигает correct
+    p = write(tmp_path, f"{HEADER}\nA,Q1,x,1\nA,Q1,3,1,0\n")
+    with pytest.raises(ValidationError) as exc:
+        read_rows(p)
+    assert exc.value.line_no == 3
+
+
+def test_read_rows_accepts_quoted_comma(tmp_path):
+    p = write(tmp_path, f'{HEADER}\nA,Q1,"3,1",0\n')
+    assert read_rows(p) == [Row("A", "Q1", "3,1", False)]
+
+
 def test_read_rows_rejects_bad_header(tmp_path):
     with pytest.raises(ValidationError) as exc:
         read_rows(write(tmp_path, "a,b\n1,2\n"))
