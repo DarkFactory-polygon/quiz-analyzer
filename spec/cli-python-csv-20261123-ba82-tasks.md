@@ -18,19 +18,19 @@ Source: workstreams/cli-python-csv-20261123-ba82/spec/30-decomposition.md#DT-01
 
 
 ### TASK-002: Агрегация по вопросам и отбор трудных
-P2 | TODO   Est: 0.5d
+P2 | ✅ DONE   Est: 0.5d
 
 Реализовать сценарии BEH-05, BEH-06, BEH-07, BEH-08, BEH-09 (DT-02, группа solo).
 Source: workstreams/cli-python-csv-20261123-ba82/spec/30-decomposition.md#DT-02
 **Depends on:** [TASK-001]
 
 **Checklist:**
-- [ ] реализовать BEH-05: Доля верных считается по каждому вопросу
-- [ ] реализовать BEH-06: Порядок вопросов — порядок первого появления в CSV
-- [ ] реализовать BEH-07: Трудные — строго ниже порога, от худшего
-- [ ] реализовать BEH-08: Доля ровно 50% при пороге 50 не трудная
-- [ ] реализовать BEH-09: Порог 40 сужает список трудных
-- [ ] проверка группы: tests/test_stats.py::test_per_question_computes_share (kind: pytest), tests/test_stats.py::test_per_question_keeps_first_appearance_order (kind: pytest), tests/test_stats.py::test_hardest_sorts_worst_first (kind: pytest), tests/test_stats.py::test_hardest_excludes_value_equal_to_threshold (kind: pytest), tests/test_stats.py::test_hardest_with_threshold_40 (kind: pytest) зелёные на BEH-05, BEH-06, BEH-07, BEH-08, BEH-09
+- [x] реализовать BEH-05: Доля верных считается по каждому вопросу
+- [x] реализовать BEH-06: Порядок вопросов — порядок первого появления в CSV
+- [x] реализовать BEH-07: Трудные — строго ниже порога, от худшего
+- [x] реализовать BEH-08: Доля ровно 50% при пороге 50 не трудная
+- [x] реализовать BEH-09: Порог 40 сужает список трудных
+- [x] проверка группы: tests/test_stats.py::test_per_question_computes_share (kind: pytest), tests/test_stats.py::test_per_question_keeps_first_appearance_order (kind: pytest), tests/test_stats.py::test_hardest_sorts_worst_first (kind: pytest), tests/test_stats.py::test_hardest_excludes_value_equal_to_threshold (kind: pytest), tests/test_stats.py::test_hardest_with_threshold_40 (kind: pytest) зелёные на BEH-05, BEH-06, BEH-07, BEH-08, BEH-09
 
 
 
