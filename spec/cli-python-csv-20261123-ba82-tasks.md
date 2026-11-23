@@ -3,17 +3,17 @@
 Сгенерировано task_bridge из behaviour-spec бандла cli-python-csv-20261123-ba82 (шаг 3 плана развития конвейера; группировка задач — по Feature-секциям). Личный путь: бриф одобрен владельцем в разговоре, задачи исполняются сразу.
 
 ### TASK-001: Пакет и чтение CSV с валидацией
-P2 | 🔍 REVIEW   Est: 0.5d
+P2 | ✅ DONE   Est: 0.5d
 
 Реализовать сценарии BEH-01, BEH-02, BEH-03, BEH-04 (DT-01, группа solo).
 Source: workstreams/cli-python-csv-20261123-ba82/spec/30-decomposition.md#DT-01
 
 **Checklist:**
-- [ ] реализовать BEH-01: Корректный CSV разбирается в строки результатов
-- [ ] реализовать BEH-02: Файл с `\r\n` и кириллицей читается одинаково
-- [ ] реализовать BEH-03: Недопустимое значение `correct` — ошибка с номером строки
-- [ ] реализовать BEH-04: Нехватка полей в строке — ошибка с номером строки
-- [ ] проверка группы: tests/test_reader.py::test_read_rows_parses_valid_file (kind: pytest), tests/test_reader.py::test_read_rows_handles_crlf_and_utf8 (kind: pytest), tests/test_reader.py::test_read_rows_rejects_bad_correct_value (kind: pytest), tests/test_reader.py::test_read_rows_rejects_short_row (kind: pytest) зелёные на BEH-01, BEH-02, BEH-03, BEH-04
+- [x] реализовать BEH-01: Корректный CSV разбирается в строки результатов
+- [x] реализовать BEH-02: Файл с `\r\n` и кириллицей читается одинаково
+- [x] реализовать BEH-03: Недопустимое значение `correct` — ошибка с номером строки
+- [x] реализовать BEH-04: Нехватка полей в строке — ошибка с номером строки
+- [x] проверка группы: tests/test_reader.py::test_read_rows_parses_valid_file (kind: pytest), tests/test_reader.py::test_read_rows_handles_crlf_and_utf8 (kind: pytest), tests/test_reader.py::test_read_rows_rejects_bad_correct_value (kind: pytest), tests/test_reader.py::test_read_rows_rejects_short_row (kind: pytest) зелёные на BEH-01, BEH-02, BEH-03, BEH-04
 
 
 
