@@ -18,7 +18,7 @@ Source: workstreams/cli-python-csv-20261123-ba82/spec/30-decomposition.md#DT-01
 
 
 ### TASK-002: Агрегация по вопросам и отбор трудных
-P2 | TODO   Est: 0.5d
+P2 | 🔄 IN_PROGRESS   Est: 0.5d
 
 Реализовать сценарии BEH-05, BEH-06, BEH-07, BEH-08, BEH-09 (DT-02, группа solo).
 Source: workstreams/cli-python-csv-20261123-ba82/spec/30-decomposition.md#DT-02
