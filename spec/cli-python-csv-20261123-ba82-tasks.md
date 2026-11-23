@@ -35,7 +35,7 @@ Source: workstreams/cli-python-csv-20261123-ba82/spec/30-decomposition.md#DT-02
 
 
 ### TASK-003: CLI, порог и текстовый отчёт
-P2 | 🔄 IN_PROGRESS   Est: 0.5d
+P2 | 🔍 REVIEW   Est: 0.5d
 
 Реализовать сценарии BEH-10, BEH-11, BEH-12, BEH-13, BEH-14 (DT-03, группа solo).
 Source: workstreams/cli-python-csv-20261123-ba82/spec/30-decomposition.md#DT-03

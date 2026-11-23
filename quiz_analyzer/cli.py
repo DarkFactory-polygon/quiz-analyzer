@@ -1,6 +1,7 @@
 """Разбор аргументов, код выхода, stderr."""
 
 import argparse
+import csv
 import sys
 
 from quiz_analyzer import report
@@ -39,6 +40,9 @@ def main(argv: list[str] | None = None) -> int:
         rows = read_rows(args.path)
     except ValidationError as e:
         print(f"Ошибка в строке {e.line_no}: {e.message}", file=sys.stderr)
+        return 1
+    except (UnicodeDecodeError, csv.Error) as e:
+        print(f"Ошибка: файл не является корректным UTF-8 CSV: {e}", file=sys.stderr)
         return 1
     except OSError as e:
         print(f"Ошибка: не удалось прочитать файл: {e}", file=sys.stderr)

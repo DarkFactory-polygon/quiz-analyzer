@@ -59,3 +59,11 @@ def test_main_reports_missing_file(tmp_path, capsys):
 def test_main_prints_none_when_no_hard_questions(tmp_path, capsys):
     assert main([_csv(tmp_path), "--threshold", "0"]) == 0
     assert capsys.readouterr().out.rstrip().endswith("нет")
+
+
+def test_main_reports_non_utf8_file(tmp_path, capsys):
+    p = tmp_path / "r.csv"
+    p.write_bytes(HEADER.encode() + b"\xff,Q1,x,1\n")
+    assert main([str(p)]) == 1
+    cap = capsys.readouterr()
+    assert cap.err and cap.out == ""
